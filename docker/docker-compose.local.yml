@@ -1,0 +1,20 @@
+services:
+  postgres:
+    image: postgres:16.3-alpine
+    container_name: coffeestore-postgres
+    environment:
+      POSTGRES_DB: coffeestore
+      POSTGRES_USER: cs_user
+      POSTGRES_PASSWORD: cs_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+volumes:
+  pgdata:
