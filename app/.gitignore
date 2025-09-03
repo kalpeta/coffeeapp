@@ -1,0 +1,33 @@
+# --- OS junk ---
+.DS_Store
+
+# --- Java/Maven build ---
+target/
+*.log
+hs_err_pid*
+*.hprof
+
+# --- IntelliJ / Eclipse / VSCode ---
+.idea/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+.vscode/
+
+# --- Spring Boot / runtime ---
+*.pid
+*.seed
+*.db
+
+# --- environment & secrets (commit templates instead) ---
+.env
+.env.*
+application-*.properties
+application-*.yml
+
+# --- test outputs ---
+surefire-reports/
+failsafe-reports/
