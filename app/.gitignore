@@ -27,9 +27,9 @@ hs_err_pid*
 .env.*
 /src/main/resources/application-*.properties
 /src/main/resources/application-*.yml
-
+git add app/src/test/resources/application-test.yml
 # --- test outputs ---
 surefire-reports/
 failsafe-reports/
 # allow test profile YAMLs
-!src/test/resources/application-test.yml
+!src/test/resources/application-*.yml
