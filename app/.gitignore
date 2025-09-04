@@ -25,9 +25,11 @@ hs_err_pid*
 # --- environment & secrets (commit templates instead) ---
 .env
 .env.*
-application-*.properties
-application-*.yml
+/src/main/resources/application-*.properties
+/src/main/resources/application-*.yml
 
 # --- test outputs ---
 surefire-reports/
 failsafe-reports/
+# allow test profile YAMLs
+!src/test/resources/application-*.yml
