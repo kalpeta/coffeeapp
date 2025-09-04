@@ -32,4 +32,4 @@ hs_err_pid*
 surefire-reports/
 failsafe-reports/
 # allow test profile YAMLs
-!src/test/resources/application-*.yml
+!src/test/resources/application-test.yml
