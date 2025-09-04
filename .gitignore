@@ -1,0 +1,3 @@
+# --- allowlist safe configs ---
+!app/src/test/resources/application-*.yml
+!config/application-example.yml
