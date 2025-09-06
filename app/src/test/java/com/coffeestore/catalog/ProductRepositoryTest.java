@@ -57,7 +57,7 @@ class ProductRepositoryTest {
     @Test
     @DisplayName("saving and retrieving a product works via JPA + Testcontainers Postgres")
     void saveAndReadBack() {
-        ProductEntity saved = repo.save(new ProductEntity("Mocha", "Chocolate + espresso", 500));
+        ProductEntity saved = repo.save(new ProductEntity("Mocha", "Chocolate + espresso", 500, 10));
         assertThat(saved.getId()).isNotNull();
 
         var found = repo.findById(saved.getId());
