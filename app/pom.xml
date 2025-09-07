@@ -65,6 +65,12 @@
             <scope>runtime</scope>
         </dependency>
 
+        <!-- Observability: Actuator -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
         <!-- Flyway core + Postgres database module -->
         <dependency>
             <groupId>org.flywaydb</groupId>
