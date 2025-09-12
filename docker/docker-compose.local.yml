@@ -16,5 +16,20 @@ services:
       timeout: 3s
       retries: 20
 
+  wiremock:
+    image: wiremock/wiremock:3.9.1
+    container_name: coffeestore-wiremock
+    ports:
+      - "8089:8080"
+    volumes:
+      - ./wiremock:/home/wiremock  # mappings + __files live here
+    command: [ "--verbose" ]
+    healthcheck:
+      test: [ "CMD", "wget", "-qO-", "http://localhost:8080/__admin/mappings" ]
+      interval: 5s
+      timeout: 2s
+      retries: 10
+
+
 volumes:
   pgdata:

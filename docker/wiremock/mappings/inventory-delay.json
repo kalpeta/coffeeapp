@@ -1,0 +1,12 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/inventory/check"
+  },
+  "response": {
+    "status": 200,
+    "fixedDelayMilliseconds": 3000,
+    "headers": { "Content-Type": "application/json" },
+    "jsonBody": { "status": "OK (but slow)" }
+  }
+}
